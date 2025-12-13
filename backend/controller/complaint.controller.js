@@ -64,8 +64,13 @@ export const createComplaint = async (req, res) => {
       data: savedComplaint
     });
   } catch (error) {
-    console.error("Error creating complaint:", error);
-    res.status(500).json({ message: "Server error. Could not create the report." });
+    console.error("FULL Error creating complaint:", error);
+    console.error("Error stack:", error.stack);
+    console.error("Error message:", error.message);
+    res.status(500).json({ 
+      message: "Server error. Could not create the report.",
+      error: error.message // REMOVE THIS IN PRODUCTION
+    });
   }
 };
 
