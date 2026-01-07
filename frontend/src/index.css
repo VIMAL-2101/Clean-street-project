@@ -35,8 +35,8 @@
   /* Light Mode - Accents */
   --color-accent-primary: #4f46e5;
   --color-accent-secondary: #2563eb;
-  --color-link: #4f46e5;
-  --color-link-hover: #4338ca;
+  --color-link: #ffffff;
+  --color-link-hover: #646464;
 }
 
 .dark {
